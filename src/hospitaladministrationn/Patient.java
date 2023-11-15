@@ -27,7 +27,7 @@ public class Patient {
    
    private static int currentID = 1;
 
-    public Patient(String name, String birthDate, String bllodType) {
+    public Patient(String name, String birthDate, String bloodType) {
         this.name = name;
         this.birthDate = birthDate;
         this.bloodType = bloodType;
