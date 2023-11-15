@@ -26,12 +26,12 @@ public class DatabaseSetup extends Database{
             Statement stmt = conn.createStatement ();
             ){
         
-        stmt.execute("CREATE DATABASE IF NOT EXIST" + DB_NAME + ";");
-        stmt.execute("USE" + DB_NAME + ";");
+        stmt.execute("CREATE DATABASE IF NOT EXISTS " + DB_NAME + ";");
+        stmt.execute("USE " + DB_NAME + ";");
         String sql =
-            "CREATE TABLE IF NOT EXIST" + TABLE_NAME +"("
+            "CREATE TABLE IF NOT EXISTS " + TABLE_NAME +"("
                 +"name VARCHAR(255),"
-                +"birthdate, DATE,"
+                +"birthdate DATE,"
                 +"bloodType VARCHAR(2),"
                 +"id INT(10)"
                 +");";
