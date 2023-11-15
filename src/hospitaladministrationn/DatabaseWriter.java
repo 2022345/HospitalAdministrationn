@@ -18,11 +18,11 @@ public class DatabaseWriter extends Database{
      public boolean addPatient(Patient patient){
           try(
                 
-            Connection conn = DriverManager.getConnection(DB_BASE_URL, USER, PASSWORD);
+            Connection conn = DriverManager.getConnection(DB_URL, USER, PASSWORD);
             Statement stmt = conn.createStatement ();
             ){
               
-              String sql = String.format("INSERT INTO" + TABLE_NAME + "VALUES ("
+              String sql = String.format("INSERT INTO " + TABLE_NAME + " VALUES ("
                       +"'%s', '%s', '%s', %d);",
       patient.getName(), patient.getBirthDate(), patient.getBloodType(), patient.getPatientID());
               
